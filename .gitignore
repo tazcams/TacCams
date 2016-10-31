@@ -32,3 +32,6 @@ Thumbs.db
 *.htaccess
 *.htaccess
 *.htaccess
+.htaccess
+app/.htaccess
+app/webroot/.htaccess
