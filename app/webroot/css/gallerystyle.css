@@ -4,12 +4,15 @@
     /*margin:0 auto;  Uncomment this line if you wish to center the gallery on page */
     width: 100%; /* Set to gallery width, in px or percentage */
     height: 205px; /* Set to gallery height */
+    background-color: black;
+    text-align: center;
 }
 
 #motioncontainer ul{
     margin: 0;
     padding: 0;
     list-style: none;
+    text-align: center;
 }
 
 #motioncontainer li{
@@ -63,8 +66,8 @@
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    height: 80%;
+    /*max-width: 700px;*/
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -120,5 +123,20 @@
     .modal-content {
         width: 100%;
     }
+}
+
+/** the Map Object **/
+#wrap { position:static; left:0; width:100%; top:0; height:100%; }
+#iframe { display: block; width:100%; height:500px; }
+#map {
+    height: 600px;
+    position: relative;
+    width: 100%;
+    margin-top: 2px;
+}
+
+.maps-frame {
+    height: 600px;
+    width: 100%;
 }
 

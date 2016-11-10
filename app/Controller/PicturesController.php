@@ -12,6 +12,8 @@ class PicturesController extends AppController
 
     public function index() {
         $this->set('pictures', $this->Picture->find('all'));
+        $this->set('filteredPictures', $this->Picture->find('all'));
+        $this->set('locations', $this->Picture->Location->find('all'));
     }
 
 }

@@ -29,32 +29,26 @@ var endofgallerymsg='<span style="font-size: 11px;">End of Gallery</span>';
 //     window.open(path,"", winattributes)
 // }
 
+// modal image displayer - members and Init
+var modal = document.getElementById('myModal');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
 function enlargeimage(name) {
-    // Get the modal
-    var modal = document.getElementById('myModal');
-
 // Get the image and insert it inside the modal - use its "alt" text as a caption
     var img = document.getElementById(name);
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
     modal.style.display = "block";
     modalImg.src = img.src;
     captionText.innerHTML = img.alt;
-
-// Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
 }
 
-
 ////NO NEED TO EDIT BELOW THIS LINE////////////
-
 var iedom=document.all||document.getElementById, scrollspeed=0, movestate='', actualwidth='', cross_scroll, ns_scroll, statusdiv, loadedyes=0, lefttime, righttime;
-
 function ontouch(el, callback){
 
     var touchsurface = el,
