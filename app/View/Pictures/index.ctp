@@ -27,8 +27,6 @@
 </table>
 
 <div>
-    <img src= "http://132.75.252.120/~tazcam/pix/picFiles/Test/1476721444_IMG_1676.JPG" alt="Missing Picture" style="width:304px;height:228px;">
-
     <?php foreach ($pictures as $picture): ?>
         <img src=<?php echo $picture['Picture']['path']; ?> alt="Missing Picture" style="width:304px;height:228px;">
     <?php endforeach; ?>
