@@ -1,4 +1,5 @@
-<link rel="stylesheet" type="text/css" href="/app/webroot/css/gallerystyle.css" />
+<!--<link rel="stylesheet" type="text/css" href='--><?php //echo $this->Html->css('gallerystyle');?><!--'/>-->
+<link rel="stylesheet" type="text/css" href='css/gallerystyle.css'/>
 <script type="text/javascript" src="app/webroot/js/motiongallery.js">
 </script>
 
