@@ -34,6 +34,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+<!--	<link rel="stylesheet" type="text/css" href="/app/webroot/css/gallerystyle.css" />-->
+<!--	<script type="text/javascript" src="app/webroot/js/motiongallery.js">-->
+<!--	</script>-->
+	
 </head>
 <body>
 	<div id="container">
