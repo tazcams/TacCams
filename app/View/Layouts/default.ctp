@@ -23,11 +23,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php echo $this->Html->charset(); ?>
     <title>תצפיטבע</title>
 	<meta name="viewport" content="initial-scale=1.0">
-	<meta charset="utf-8">
-    <!--meta http-equiv="content-type" content="text/html; charset=UTF-8" /-->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <title>תצפיטבע</title>
     <base href="<?php echo $this->webroot; ?>">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<?php
 		echo $this->Html->meta('icon');
 
@@ -43,7 +42,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
     	<link href='http://fonts.googleapis.com/earlyaccess/opensanshebrew.css' rel='stylesheet' type='text/css'>
     	<?php echo $this->Html->css(array('/angular/styles/vendor','/angular/styles/app')); ?>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
 </head>
 <body>
 	<div id="container">
