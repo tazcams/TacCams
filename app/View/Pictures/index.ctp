@@ -9,17 +9,17 @@
 <!--            </tr>-->
 <!--        </table>-->
 <!--    </div>-->
-    <div>
-        <h2>This list is coming from NG </h2>
-        <ul>
-            <li ng-repeat="pic in filteredPictures | limitTo: 20">
-               <span>{{ pic.Picture.path }}</span>
-            </li>
+<!--    <div>-->
+<!--        <ul>-->
+<!--            <li ng-repeat="pic in filteredPictures | limitTo: 10">-->
+<!--                <a href=""  onClick="enlargeimage(''); return false">-->
+<!--                    <img id="{{ pic.Picture.name }}" ng-src="{{ pic.Picture.path }}" alt="{{ pic.Picture.name }}">-->
+<!--                </a>-->
+<!--            </li>-->
+<!---->
+<!--        </ul>-->
+<!--    </div>-->
 
-        </ul>
-    </div>
-
-    <h2>This Galery is still coming from PHP </h2>
     <div  id="motioncontainer" style="position:relative;overflow: hidden">
         <div id="motiongallery" style="position:absolute;left:0;top:0;white-space: nowrap;">
             <div id="trueContainer" style="white-space: nowrap;">
@@ -37,6 +37,7 @@
                     <!--                                 src='{{ pic.Picture.path }}'-->
                     <!--                                 alt="" ></a>-->
                     <!--                    </li>-->
+
 
                 </ul>
             </div>
