@@ -21,10 +21,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $this->fetch('title'); ?>
-	</title>
+    <title>תצפיטבע</title>
+	<meta name="viewport" content="initial-scale=1.0">
+	<meta charset="utf-8">
+    <!--meta http-equiv="content-type" content="text/html; charset=UTF-8" /-->
+    <title>תצפיטבע</title>
+    <base href="<?php echo $this->webroot; ?>">
+
 	<?php
 		echo $this->Html->meta('icon');
 
@@ -37,12 +40,26 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <!--	<link rel="stylesheet" type="text/css" href="/app/webroot/css/gallerystyle.css" />-->
 <!--	<script type="text/javascript" src="app/webroot/js/motiongallery.js">-->
 <!--	</script>-->
-	
+
+    	<link href='http://fonts.googleapis.com/earlyaccess/opensanshebrew.css' rel='stylesheet' type='text/css'>
+    	<?php echo $this->Html->css(array('/angular/styles/vendor','/angular/styles/app')); ?>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 <body>
 	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+<!-- 			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+-->		<div id="header">
+			<!-- <?php echo $this->Html->image('/angular/images/sideLogo.png');?> -->
+			<?php echo $this->Html->link(
+					$this->Html->image('/angular/images/sideLogo.png', array('alt' => 'Tatzpiteva', 'border' => '2')),
+					'http://tatzpiteva.org.il/',
+					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered', 'align' => 'right'));
+			?>
+            <!--?php echo $this->Html->link(
+                    $this->Html->image('/angular/images/golanLogo.png', array('alt' => 'Golan', 'border' => '2')),
+                    'http://www.golan.org.il/',
+                    array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered', 'align' => 'left'));
+            ?-->
 		</div>
 		<div id="content">
 
@@ -51,6 +68,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
+			<?php echo $this->Html->link('Log Out',
+										array('controller' => 'users', 'action' => 'logout'),
+										array('align' => 'right')); ?>
+		</div>
+		<!-- <div id="footer">
 			<?php echo $this->Html->link(
 					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
 					'http://www.cakephp.org/',
@@ -60,8 +82,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<p>
 				<?php echo $cakeVersion; ?>
 			</p>
-		</div>
+		</div> -->
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	<!-- <?php echo $this->element('sql_dump'); ?> -->
 </body>
 </html>
