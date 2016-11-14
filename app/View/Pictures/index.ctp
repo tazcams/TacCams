@@ -1,6 +1,21 @@
-<h3>Pictures:</h3>
-<div ng-app="tazCamApp"   >
+<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+<!--    <p>The url of this page is:</p>-->
+<!--    <h3>{{myUrl}}</h3>-->
+<!--</div>-->
+<!---->
+<!--<p>This example uses the built-in $location service to get the absolute url of the page.</p>-->
+<!---->
+<!--<script>-->
+<!--    var app = angular.module('myApp', []);-->
+<!--    app.controller('myCtrl', function($scope, $location) {-->
+<!--        $scope.myUrl = $location.absUrl();-->
+<!--    });-->
+<!--</script>-->
 
+
+
+<h3>Pictures:</h3>
+<div ng-app="mainApp" >
     <div ng-controller="mainCtrl">
         <p>Name : <input type="text" ng-model="firstName" ></p>
         <p>The name is <span ng-bind="firstName"></span> <span ng-bind="lastName"></span></p>
@@ -14,10 +29,9 @@
                 <td>{{ pic.Picture.location_id }} </td>
             </tr>
         </table>
-
-
-
     </div>
+
+
 
     <p my-directive></p>
 </div>
