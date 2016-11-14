@@ -1,56 +1,51 @@
-<!--<div ng-app="myApp" ng-controller="myCtrl">-->
-<!--    <p>The url of this page is:</p>-->
-<!--    <h3>{{myUrl}}</h3>-->
-<!--</div>-->
-<!---->
-<!--<p>This example uses the built-in $location service to get the absolute url of the page.</p>-->
-<!---->
-<!--<script>-->
-<!--    var app = angular.module('myApp', []);-->
-<!--    app.controller('myCtrl', function($scope, $location) {-->
-<!--        $scope.myUrl = $location.absUrl();-->
-<!--    });-->
-<!--</script>-->
-
-
-
 <h3>Pictures:</h3>
-<div ng-app="mainApp" >
-    <div ng-controller="mainCtrl">
-        <p>Name : <input type="text" ng-model="firstName" ></p>
-        <p>The name is <span ng-bind="firstName"></span> <span ng-bind="lastName"></span></p>
-        <h1>Hello {{fullName()}} </h1>
-        <h1>Hello {{5 + 5}} </h1>
+<div ng-app="mainApp" ng-controller="mainCtrl">
+<!--    <div>-->
+<!--        <table>-->
+<!--            <tr ng-repeat="pic in filteredPictures | limitTo: 10">-->
+<!--                <td>{{ pic.Picture.id }} </td>-->
+<!--                <td>{{ pic.Picture.name }} </td>-->
+<!--                <td>{{ pic.Picture.location_id }} </td>-->
+<!--            </tr>-->
+<!--        </table>-->
+<!--    </div>-->
+    <div>
+        <h2>This list is coming from NG </h2>
+        <ul>
+            <li ng-repeat="pic in filteredPictures | limitTo: 20">
+               <span>{{ pic.Picture.path }}</span>
+            </li>
 
-        <table>
-            <tr ng-repeat="pic in pictures">
-                <td>{{ pic.Picture.id }} </td>
-                <td>{{ pic.Picture.name }} </td>
-                <td>{{ pic.Picture.location_id }} </td>
-            </tr>
-        </table>
+        </ul>
     </div>
 
+    <h2>This Galery is still coming from PHP </h2>
+    <div  id="motioncontainer" style="position:relative;overflow: hidden">
+        <div id="motiongallery" style="position:absolute;left:0;top:0;white-space: nowrap;">
+            <div id="trueContainer" style="white-space: nowrap;">
+                <ul>
+                    <?php foreach ($filteredPictures as $picture): ?>
+                        <li><a href="#" onClick="enlargeimage('<?php echo $picture['Picture']['name'];?>'); return false">
+                                <img id=<?php echo $picture['Picture']['name'];?>
+                                     src=<?php echo $picture['Picture']['path'];?>
+                                     alt=<?php echo $picture['Picture']['name'];?> ></a></li>
+                    <?php endforeach; ?>
 
+                    <!--                    <li nr-repeat="pic in filteredPictures | limitTo: 10">-->
+                    <!--                        <a href="#" onClick="enlargeimage(''); return false">-->
+                    <!--                            <img id=""-->
+                    <!--                                 src='{{ pic.Picture.path }}'-->
+                    <!--                                 alt="" ></a>-->
+                    <!--                    </li>-->
 
-    <p my-directive></p>
-</div>
-
-
-<div id="motioncontainer" style="position:relative;overflow: hidden">
-    <div id="motiongallery" style="position:absolute;left:0;top:0;white-space: nowrap;">
-        <div id="trueContainer" style="white-space: nowrap;">
-            <ul>
-                <?php foreach ($filteredPictures as $picture): ?>
-                    <li><a href="#" onClick="enlargeimage('<?php echo $picture['Picture']['name'];?>'); return false">
-                            <img id=<?php echo $picture['Picture']['name'];?>
-                                 src=<?php echo $picture['Picture']['path'];?>
-                                 alt=<?php echo $picture['Picture']['name'];?> ></a></li>
-                <?php endforeach; ?>
-            </ul>
+                </ul>
+            </div>
         </div>
+
     </div>
 </div>
+
+
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
