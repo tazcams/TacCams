@@ -27,7 +27,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     <title>תצפיטבע</title>
     <base href="<?php echo $this->webroot; ?>">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-	<script type="text/javascript" src="\angular\scripts\tazCamApp.js"></script>
+	<script type="text/javascript" src="http://132.75.252.120/~tazcam/TazCams/app/webroot/angular/scripts/tazCamApp.js"></script>
 	<?php
 		echo $this->Html->meta('icon');
 		echo $this->Html->css('cake.generic');
