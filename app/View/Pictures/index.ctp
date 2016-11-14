@@ -2,6 +2,11 @@
 <div ng-app="tazCamApp"   >
 
     <div ng-controller="mainCtrl">
+        <p>Name : <input type="text" ng-model="firstName" ></p>
+        <p>The name is <span ng-bind="firstName"></span> <span ng-bind="lastName"></span></p>
+        <h1>Hello {{fullName()}} </h1>
+        <h1>Hello {{5 + 5}} </h1>
+
         <table>
             <tr ng-repeat="pic in pictures">
                 <td>{{ pic.Picture.id }} </td>
@@ -12,10 +17,6 @@
 
 
 
-        <p>Name : <input type="text" ng-model="firstName" ></p>
-        <p>The name is <span ng-bind="firstName"></span> <span ng-bind="lastName"></span></p>
-        <h1>Hello {{fullName()}} </h1>
-        <h1>Hello {{5 + 5}} </h1>
     </div>
 
     <p my-directive></p>

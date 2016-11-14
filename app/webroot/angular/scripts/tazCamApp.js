@@ -3,11 +3,14 @@
  */
 var app = angular.module('tazCamApp', []);
 
-app.controller('mainCtrl', function($scope, $rootScope, $http) {
+app.controller('mainCtrl', function($scope, $rootScope, $http, $location) {
 
+    var x = $location.href;
+    $scope.firstName= x;
     $rootScope.appUrl = "";
-
-    $scope.firstName= "John";
+    if (typeof x !== 'undefined') {
+        $rootScope.appUrl = x;
+    }
     $scope.lastName= "Doe";
 
 
