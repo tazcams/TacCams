@@ -42,3 +42,7 @@
  * the built-in default routes.
  */
 	require CAKE . 'Config' . DS . 'routes.php';
+
+	Router::mapResources("pictures");
+	Router::parseExtensions();
+

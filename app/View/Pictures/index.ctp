@@ -1,4 +1,27 @@
 <h3>Pictures:</h3>
+<div ng-app="tazCamApp"   >
+
+    <div ng-controller="mainCtrl">
+        <table>
+            <tr ng-repeat="pic in pictures">
+                <td>{{ pic.Picture.id }} </td>
+                <td>{{ pic.Picture.name }} </td>
+                <td>{{ pic.Picture.location_id }} </td>
+            </tr>
+        </table>
+
+
+
+        <p>Name : <input type="text" ng-model="firstName" ></p>
+        <p>The name is <span ng-bind="firstName"></span> <span ng-bind="lastName"></span></p>
+        <h1>Hello {{fullName()}} </h1>
+        <h1>Hello {{5 + 5}} </h1>
+    </div>
+
+    <p my-directive></p>
+</div>
+
+
 <div id="motioncontainer" style="position:relative;overflow: hidden">
     <div id="motiongallery" style="position:absolute;left:0;top:0;white-space: nowrap;">
         <div id="trueContainer" style="white-space: nowrap;">
@@ -71,11 +94,10 @@
 
             });
         }
-
-        // Create a marker and set its position.
     }
 </script>
 <br><br>
+
 <h3>Pictures Data:</h3>
 <table>
     <tr>

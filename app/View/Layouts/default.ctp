@@ -27,21 +27,21 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     <title>תצפיטבע</title>
     <base href="<?php echo $this->webroot; ?>">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script type="text/javascript" src="\angular\scripts\tazCamApp.js"></script>
 	<?php
 		echo $this->Html->meta('icon');
-
 		echo $this->Html->css('cake.generic');
+//
+//		echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js', array('inline' => false));
+//		echo $this->Html->script('\angular\scripts\tazCamApp.js', array('inline' => false));
+
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
-<!--	<link rel="stylesheet" type="text/css" href="/app/webroot/css/gallerystyle.css" />-->
-<!--	<script type="text/javascript" src="app/webroot/js/motiongallery.js">-->
-<!--	</script>-->
-
-    	<link href='http://fonts.googleapis.com/earlyaccess/opensanshebrew.css' rel='stylesheet' type='text/css'>
-    	<?php echo $this->Html->css(array('/angular/styles/vendor','/angular/styles/app')); ?>
+	<link href='http://fonts.googleapis.com/earlyaccess/opensanshebrew.css' rel='stylesheet' type='text/css'>
+	<?php echo $this->Html->css(array('/angular/styles/vendor','/angular/styles/app')); ?>
 
 </head>
 <body>
