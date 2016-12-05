@@ -1,4 +1,22 @@
-<h3>Pictures:</h3>
+<h3>Picture Strip:</h3>
+<div id="myModal" class="modal">
+    <!-- The Close Button -->
+    <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption" ></div>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+    <!-- Group buttons-->
+    <div id="modelButtons" >
+        <button type="button" class="btn btn-success">צור תצפית</button>
+        <button type="button" class="btn btn-danger">תמונה ריקה</button>
+    </div>
+
+</div>
+
+
+
+<!-- The Modal -->
 <div ng-app="mainApp" ng-controller="mainCtrl">
 <!--    <div>-->
 <!--        <table>-->
@@ -20,7 +38,7 @@
 <!--        </ul>-->
 <!--    </div>-->
 
-    <div  id="motioncontainer" style="position:relative;overflow: hidden">
+    <div  id="motioncontainer">
         <div id="motiongallery" style="position:absolute;left:0;top:0;white-space: nowrap;">
             <div id="trueContainer" style="white-space: nowrap;">
                 <ul>
@@ -46,19 +64,8 @@
     </div>
 </div>
 
-
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-    <!-- The Close Button -->
-    <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-    <!-- Modal Content (The Image) -->
-    <img class="modal-content" id="img01">
-    <!-- Modal Caption (Image Text) -->
-    <div id="caption"></div>
-</div>
-
-
+<br>
+<h3>Map:</h3>
 <div id="map"></div>
 <script>
     function initMap() {
@@ -67,7 +74,7 @@
         var map = new google.maps.Map(document.getElementById('map'), {
             center: myLatLng,
             scrollwheel: true,
-            zoom: 12,
+            zoom: 13,
             mapTypeId: 'hybrid',
         });
 
@@ -81,7 +88,7 @@
             var marker = new google.maps.Marker({
                 map: map,
                 position: pos,
-                icon: 'img/camera-icon-16.png',
+                icon: 'img/location-photo-32.png',
                 title: locationValue['latitude'] + " : " + locationValue['longitude']
             });
             markersIdsArray[marker.position] = locationValue['id'];
@@ -138,7 +145,7 @@
 
 <?php //unset($picture); ?>
 
-<link rel="stylesheet" type="text/css" href='css/gallerystyle.css'/>
+
 <script type="text/javascript" src="js/motiongallery.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1uyk9PR7I2oJ2BVbQtncuS6JMhA3PF_U&callback=initMap"
         async defer></script>
